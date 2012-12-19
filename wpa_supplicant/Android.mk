@@ -43,6 +43,9 @@ L_CFLAGS += -DWPA_UNICODE_SSID
 # OpenSSL is configured without engines on Android
 L_CFLAGS += -DOPENSSL_NO_ENGINE
 
+# get rid of strict aliasing 
+L_CFLAGS += -fno-strict-aliasing
+
 INCLUDES = $(LOCAL_PATH)
 INCLUDES += $(LOCAL_PATH)/src
 INCLUDES += $(LOCAL_PATH)/src/common
